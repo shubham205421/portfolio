@@ -1,0 +1,52 @@
+/* ══════════════════════════════════════════════
+   SKILL ITEM LAYOUT FIX (appended styles)
+   These override the base style.css for
+   correct skill-item flex direction
+══════════════════════════════════════════════ */
+
+/* Fix the skill item layout that was overridden */
+.skill-item {
+  display: flex;
+  flex-direction: column !important;
+  gap: 6px !important;
+  align-items: stretch !important;
+}
+
+.skill-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-icon-wrap {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.skill-icon-wrap svg {
+  width: 16px;
+  height: 16px;
+}
+
+.skill-item:hover .skill-icon-wrap {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.skill-item > span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skill-bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
